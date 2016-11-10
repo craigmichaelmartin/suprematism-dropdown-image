@@ -1,6 +1,6 @@
 # Suprematism Dropdown Image
 
-An Angular 2 dropdown image component.
+An Angular 2 dropdown component with the selected item showcased with an image.
 
 
 #### Installation
@@ -23,21 +23,37 @@ we must manually run the publish prehook and save the files.
 - [`supre-dropdown-image`](#supre-dropdown-image)
 
 #### <a id="supre-dropdown-image"></a> `supre-dropdown-image`
-A component for a dropdown image.
+A component for a dropdown with showcased image.
 
 ##### Directives
-- Any Directives?
+- `supreDefault: string` - the default selected item
+- `supreItems: Array<Item> - an array of items
+
 
 ##### Events
-- Any Events
+-  `itemSelected: Item` - the selected item
 
 
 ## States
-- The dropdown image component has these states:
+The dropdown image component has these states:
+- `open`
+- `closed`
+- `single`
+- `multi`
+
+Each dropdown item within it has these states:
+- `active`
+- `selected`
 
 
 ## Example
 ```html
-<supre-dropdown-image>
-</supre-dropdown-image>
+<supre-dropdown-image supreDefault="Ford Motor Company" (itemSelected)="itemChanged($event)"
+  [supreItems]="[
+    { name: 'Applebees', image: '//upload.wikimedia.org/wikipedia/en/b/bc/Applebee%27s.svg' },
+    { name: 'Barclays Bank', image: '//upload.wikimedia.org/wikipedia/en/7/7e/Barclays_logo.svg' },
+    { name: 'Ford Motor Company', image: '//upload.wikimedia.org/wikipedia/commons/a/a0/Ford_Motor_Company_Logo.svg' },
+    { name: 'Toyota Inc', image: '//upload.wikimedia.org/wikipedia/commons/9/9d/Toyota_carlogo.svg' }
+  ]"
+></supre-dropdown-image>
 ```

@@ -12,7 +12,7 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 var common_1 = require('@angular/common');
-var repo_name_component_1 = require('./dropdown-image.component');
+var dropdown_image_component_1 = require('./dropdown-image.component');
 var core_1 = require('@angular/core');
 __export(require('./dropdown-image.component'));
 var DropdownImageModule = (function () {
@@ -24,13 +24,13 @@ var DropdownImageModule = (function () {
                 common_1.CommonModule,
             ],
             declarations: [
-                repo_name_component_1.DropdownImageComponent,
+                dropdown_image_component_1.DropdownImageComponent,
             ],
             exports: [
-                repo_name_component_1.DropdownImageComponent,
+                dropdown_image_component_1.DropdownImageComponent,
             ],
             entryComponents: [
-                repo_name_component_1.DropdownImageComponent,
+                dropdown_image_component_1.DropdownImageComponent,
             ]
         }), 
         __metadata('design:paramtypes', [])
